@@ -1,0 +1,11 @@
+CREATE TABLE `patient_info` (
+  `patientId` int(11) NOT NULL AUTO_INCREMENT,
+  `patientName` varchar(45) DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
+  `adress` varchar(45) DEFAULT NULL,
+  `problem` varchar(45) DEFAULT NULL,
+  `wardNo` int(11) DEFAULT NULL,
+  `doctor` varchar(45) DEFAULT NULL,
+  `contact` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`patientId`)
+)
