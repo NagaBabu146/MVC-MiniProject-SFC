@@ -9,7 +9,7 @@
 		<property name="mappings">
 			<props>
 				<prop key="home.htm">pvc</prop>
-				<prop key="report.htm">lpc</prop>
+				<prop key="patients.htm">lpc</prop>
 				<prop key="patient_edit.htm">epc</prop>
 			</props>
 		</property>
