@@ -34,5 +34,6 @@
          <h1 style="color: red">Records not found</h1>
     </c:otherwise>
     </c:choose>
+    <h1 style="color:red; text-align="center">${listDTO}</h1>
     <br>
     <a href="home.htm"><img src="images/home.png"/></a>

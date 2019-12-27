@@ -10,18 +10,32 @@
 			<props>
 				<prop key="home.htm">pvc</prop>
 				<prop key="report.htm">lpc</prop>
+				<prop key="patient_edit.htm">epc</prop>
 			</props>
 		</property>
 	</bean>
 
 	<!--cfg Controller class -->
-	<bean id="pvc" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
-	   <property name="viewName" value="welcome"></property>
+	<bean id="pvc"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="welcome"></property>
 	</bean>
 	
-	<bean id="lpc" class="com.nt.controller.ListPatientController">
-	<constructor-arg ref="hospitalService"></constructor-arg>
+	<bean id="epc" class="com.nt.controller.EditPatientController">
+		<property name="formView" value="edit_patient"></property>
+		<property name="commandName" value="patientCmd"></property>
+		<property name="commandClass"
+			value="com.nt.command.PatientDetailsCommand"></property>
+		<property name="successView" value="list_patients"></property>
+		<property name="sessionForm" value="true"></property>
+		<constructor-arg ref="hospitalService"></constructor-arg>
+
 	</bean>
+
+	<bean id="lpc" class="com.nt.controller.ListPatientController">
+		<constructor-arg ref="hospitalService"></constructor-arg>
+	</bean>
+	
 	<!-- cfg ViewResolver -->
 	<bean id="vr"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
