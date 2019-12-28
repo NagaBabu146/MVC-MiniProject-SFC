@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class PatientDetailsCommand {
-
+    
 	private int patientId;
 	private String patientName;
 	private int age;

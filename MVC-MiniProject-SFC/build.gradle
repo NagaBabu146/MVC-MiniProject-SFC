@@ -15,6 +15,7 @@ repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+     mavenCentral{"https://packages.atlassian.com/maven-3rdparty/"}
 }
 
 dependencies {
@@ -35,5 +36,8 @@ compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
 compile group: 'javax.servlet', name: 'jstl', version: '1.2'
 // https://mvnrepository.com/artifact/taglibs/standard
 compile group: 'taglibs', name: 'standard', version: '1.1.2'
-
+// https://mvnrepository.com/artifact/com.zaxxer/HikariCP
+compile group: 'com.zaxxer', name: 'HikariCP', version: '2.7.4'
+ // https://mvnrepository.com/artifact/com.oracle/ojdbc6
+  compile group: 'com.oracle', name: 'ojdbc6', version: '11.2.0.4.0-atlassian-hosted'
 }

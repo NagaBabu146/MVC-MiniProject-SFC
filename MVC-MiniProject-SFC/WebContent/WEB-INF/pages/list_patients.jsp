@@ -5,7 +5,7 @@
     <c:choose>
     
     <c:when test="${!empty listDTO }">
-       <table border ="1">
+       <table border ="1" style="background-image:url(images/hospital.jpg)">
          <caption>All Patients Details</caption>
          <tr style="background:aqua;" >
            <th>srNo</th> <th>patientId</th> <th>patientName</th><th>age</th> <th> addres</th> <th>problem</th> <th>wardNo</th> <th>contact</th> <th>doctor</th>Operations<th>
@@ -34,6 +34,6 @@
          <h1 style="color: red">Records not found</h1>
     </c:otherwise>
     </c:choose>
-    <h1 style="color:red; text-align="center">${listDTO}</h1>
+    <h1 style="color:red; text-align="center">${resultMsg}</h1>
     <br>
     <a href="home.htm"><img src="images/home.png"/></a>

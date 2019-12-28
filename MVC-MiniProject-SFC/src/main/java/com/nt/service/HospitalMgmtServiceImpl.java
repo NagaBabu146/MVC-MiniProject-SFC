@@ -32,7 +32,9 @@ public class HospitalMgmtServiceImpl implements HospitalMgmtService {
 		listBO.forEach(bo -> {
 			PatientDetailsDTO dto = new PatientDetailsDTO();
 			BeanUtils.copyProperties(bo, dto);
-			dto.setSrNo(listDTO.size() + 1);
+			
+			dto.setSrNo(listDTO.size()+1);
+		
 			listDTO.add(dto);
 		});
 		return listDTO;

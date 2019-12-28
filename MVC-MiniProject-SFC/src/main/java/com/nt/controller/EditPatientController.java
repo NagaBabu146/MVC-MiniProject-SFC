@@ -57,8 +57,8 @@ public class EditPatientController extends SimpleFormController {
 	List<PatientDetailsDTO> listDTO = service.fetchAllPatients();
 	ModelAndView mav = null;
 		mav = new ModelAndView();
-		mav.addObject(listDTO);
-		mav.addObject(resultMsg);
+		mav.addObject("listDTO",listDTO);
+		mav.addObject("resultMsg",resultMsg);
 		mav.setViewName(getSuccessView());
 		return mav;
 
